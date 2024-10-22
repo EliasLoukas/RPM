@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Request Screen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pmt Request Screen</h1>
+            <a href="#" class="home-icon">🏠</a>
+        </header>
+        <div class="content">
+            <div class="left-section">
+                <label for="description">Description</label>
+                <textarea id="description" rows="5"></textarea><br><br>
+                
+                <div class="attach-section">
+                    <label for="myfile">📎 Attach Document</label><br>
+                    <input type="file" id="myfile" class="attach-btn">
+                </div>
+            </div>
+
+            <div class="right-section">
+                <form id="payment-form" method="post" action="submit-payment.php" enctype="multipart/form-data"> 
+
+                <label><b>Payment Type</b></label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select>
+                  <option>Check</option>
+                  <option>Transfer</option>
+                  <option>Cash</option>
+                </select><br><br>
+                
+                    <div class="payment-row">
+                        <label>Cash</label>
+                        <select>
+                            <option>LBP</option>
+                            <option>USD</option>
+                        </select>
+                        <input type="text" placeholder="Amount in LBP">
+                          <input type="text" placeholder="Amount in USD">
+                    </div>
+                    <div class="payment-row">
+                        <label>Transfer</label>
+                        <select>
+                            <option>LBP</option>
+                            <option>USD</option>
+                        </select>
+                        <input type="text" placeholder="Amount in LBP">
+                          <input type="text" placeholder="Amount in USD">
+                    </div>
+                    <div id="check-section">
+                        <div class="payment-row">
+                            <button type="button" class="add-btn" id="add-check-btn">+</button>
+                            <label > &nbsp; &nbsp;Check</label>
+                            <div class="ri">
+                                <select>
+                                   <option>LBP</option>
+                                   <option>USD</option>
+                                </select>
+                                <input type="text" placeholder="Amount in LBP">
+                                <input type="text" placeholder="Amount in USD">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="buttons">
+            <button type="submit" class="submit-btn">Submit</button> 
+            <button type="button" class="cancel-btn">Cancel</button> 
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
